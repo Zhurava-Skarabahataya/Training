@@ -1,54 +1,47 @@
 package march.practice.StepickAlgorithms;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class HuffmanCode1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String inputStr = sc.nextLine();
-        long start = System.currentTimeMillis();
-        char[] inputCharSeq = inputStr.toCharArray();
-        ArrayList<Character> arrChar = new ArrayList<>();
 
-        for (char c : inputCharSeq) {
-            if (!arrChar.contains(c)){
-                arrChar.add(c);
-            }
-        }
-        Character [] uniqueChars = new Character[arrChar.size()];
-        int [] charQuant = new int[uniqueChars.length];
-        uniqueChars = arrChar.toArray(uniqueChars);
-        for (int i = 0; i < uniqueChars.length; i++) {
-            for (int j = 0; j < inputCharSeq.length; j++) {
-                if (uniqueChars[i] == inputCharSeq[j]){
-                    charQuant[i]++;
-                }
-            }
-        }
-        for (int i = 0; i < uniqueChars.length; i++) {
-            System.out.println(uniqueChars[i] + " " + charQuant[i]);
-        }
-        boolean needed = true;
-        while (needed == true) {
-            needed = false;
-            for (int i = 0; i < charQuant.length-1; i++) {
-                if (charQuant[i] < charQuant[i+1]){
-                    needed = true;
-                    int temp = charQuant[i];
-                    charQuant[i] = charQuant [i+1];
-                    charQuant[i+1] = temp;
-                    Character tempCh = uniqueChars[i];
-                    uniqueChars[i] = uniqueChars[i+1];
-                    uniqueChars[i+1] = tempCh;
-                }
-            }
-        }
-        for (int i = 0; i < uniqueChars.length; i++) {
-            System.out.println(uniqueChars[i] + " " + charQuant[i]);
-        }
+        long start = System.currentTimeMillis();
+        new HuffmanCode1().run();
         long finish = System.currentTimeMillis();
         System.out.println(finish - start + "ms");
 
+    }
+
+    private void run() {
+        System.out.println();
+        Scanner sc = new Scanner(System.in);
+        int chars = Integer.parseInt(sc.next());
+        String lengthCode = sc.next();
+        Map<String, Character> charInt = new HashMap<>();
+        for (int i = 0; i < chars; i++) {
+            String letter = sc.next();
+            char c = letter.charAt(0);
+            charInt.put(sc.next(), c);
+        }
+//        for (Map.Entry<String, Character> entry : charInt.entrySet()) {
+//            System.out.println(entry.getKey() + " " + entry.getValue());
+//        }
+        String jjj = sc.next();
+        StringBuilder sb = new StringBuilder(jjj);
+        StringBuilder result = new StringBuilder();
+        while (sb.length() > 0) {
+            int count = 0;
+            StringBuilder sss = new StringBuilder();
+            while (true) {
+                sss.append(sb.charAt(count));
+                if (charInt.containsKey(sss.toString())){
+                    result.append(charInt.get(sss.toString()));
+                    sb.delete(0, count+1);
+                    break;
+                }
+                count++;
+            }
+        }
+        System.out.println(result);
     }
 }
