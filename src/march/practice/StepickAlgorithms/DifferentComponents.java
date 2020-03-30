@@ -1,6 +1,5 @@
 package march.practice.StepickAlgorithms;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,8 +8,6 @@ public class DifferentComponents {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long n = sc.nextInt();
-        int k = 0;
-
         ArrayList<Long> components = findComponents(n);
         System.out.println(components.size());
         for (Long component : components) {

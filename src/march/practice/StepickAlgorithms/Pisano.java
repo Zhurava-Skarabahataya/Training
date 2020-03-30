@@ -1,9 +1,5 @@
 package march.practice.StepickAlgorithms;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 class Pisano {
     private static final int MOD = (int) (1e9 + 7);
 

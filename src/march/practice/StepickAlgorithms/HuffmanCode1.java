@@ -16,7 +16,6 @@ public class HuffmanCode1 {
         System.out.println();
         Scanner sc = new Scanner(System.in);
         int chars = Integer.parseInt(sc.next());
-        String lengthCode = sc.next();
         Map<String, Character> charInt = new HashMap<>();
         for (int i = 0; i < chars; i++) {
             String letter = sc.next();

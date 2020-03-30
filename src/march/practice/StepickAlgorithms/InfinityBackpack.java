@@ -25,19 +25,17 @@ public class InfinityBackpack {
             }
             System.out.println();
         }
-        for (int i = 0; i < products.length; i++) {
-            if (capacity <=0){
+        for (double[] product : products) {
+            if (capacity <= 0) {
                 break;
-            }
-            else if (capacity > products[i][1]){
-                capacity -= products[i][1];
+            } else if (capacity > product[1]) {
+                capacity -= product[1];
                 System.out.println("capacity " + capacity);
-                finalValue += products[i][0];
-                System.out.println("добавлего "+ finalValue);
-            }
-            else if (capacity <= products[i][1]){
-                finalValue += capacity * (products[i][0] / products[i][1]);
-                System.out.println("добавлего "+ finalValue);
+                finalValue += product[0];
+                System.out.println("добавлего " + finalValue);
+            } else if (capacity <= product[1]) {
+                finalValue += capacity * (product[0] / product[1]);
+                System.out.println("добавлего " + finalValue);
                 capacity = 0;
 
             }

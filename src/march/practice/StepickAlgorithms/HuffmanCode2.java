@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class HuffmanCode2 {
 
-    class Node implements Comparable<Node> {
+    static class Node implements Comparable<Node> {
         final int sum;
         String code;
 
@@ -27,7 +27,7 @@ public class HuffmanCode2 {
         }
     }
 
-    class InternalNode extends Node {
+    static class InternalNode extends Node {
         Node left;
         Node right;
 
@@ -45,7 +45,7 @@ public class HuffmanCode2 {
         }
     }
 
-    class LeafNode extends Node {
+    static class LeafNode extends Node {
         char symb;
 
         @Override
@@ -60,7 +60,7 @@ public class HuffmanCode2 {
         }
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         long start = System.currentTimeMillis();
         new HuffmanCode2().run();
 
@@ -68,7 +68,7 @@ public class HuffmanCode2 {
         System.out.println(fin - start + "ms");
     }
 
-    private void run() throws FileNotFoundException {
+    private void run() {
         Scanner sc = new Scanner(System.in);
         String inputStr = sc.next();
         //System.out.println(inputStr);
