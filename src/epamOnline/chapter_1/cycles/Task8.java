@@ -2,9 +2,16 @@ package epamOnline.chapter_1.cycles;
 
 //Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
 
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Task8 {
+
+    static  Set<Integer> setOfNums = new HashSet<>();
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
@@ -12,7 +19,10 @@ public class Task8 {
         while (a!=0){
             int digit = a%10;
             checkIfContains(digit , b);
-            a = a/10;
+            a /= 10;
+        }
+        for (Integer t : setOfNums){
+            System.out.println(t);
         }
     }
 
@@ -20,10 +30,10 @@ public class Task8 {
         while (b!=0){
             int myDig = b%10;
             if (myDig == digit){
-                System.out.println(myDig);
+                setOfNums.add(myDig);
                 break;
             }
-            b = b/10;
+            b /= 10;
         }
     }
 
