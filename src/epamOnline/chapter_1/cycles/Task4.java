@@ -6,11 +6,12 @@ import java.math.BigInteger;
 
 public class Task4 {
     public static void main(String[] args) {
-        BigInteger mul = new BigInteger(1);
-        int count = 1;
+        BigInteger mul = new BigInteger("1");
+        long count = 1;
         while (count <= 200){
-            mul = mul.multiply(mul = count * count;
-            System.out.println(mul);
+            BigInteger bigInteger = BigInteger.valueOf(count);
+            bigInteger = bigInteger.multiply(bigInteger);
+            mul = mul.multiply(bigInteger);
             count++;
         }
         System.out.println(mul);

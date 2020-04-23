@@ -16,12 +16,11 @@ public class Task2 {
         for (double i = a; i <= b; i += h) {
             if (i>2) {
                 result = i;
-                System.out.println(result);
             }
             else {
                 result = -i;
-                System.out.println(result);
             }
+            System.out.println(result);
         }
     }
 
