@@ -19,7 +19,9 @@ public class Task9 {
                 mapa.put(i, 1);
             }
         }
-        int maximum = mapa.values().stream().max(Comparator.naturalOrder()).get();
+        int maximum;
+        //noinspection OptionalGetWithoutIsPresent
+        maximum = mapa.values().stream().max(Comparator.naturalOrder()).get();
         List<Integer> listOfMaxs;
         listOfMaxs = mapa.entrySet().stream().filter(e -> e.getValue() == maximum)
                 .map(Map.Entry::getKey).collect(Collectors.toList());
