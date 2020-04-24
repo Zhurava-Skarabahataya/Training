@@ -9,9 +9,10 @@ public class Task6 {
         double sum = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (isEven(i)) {
-                System.out.println(numbers[i]);
+                sum += numbers[i];
             }
         }
+        System.out.println(sum);
     }
 
     private static boolean isEven(int i) {
@@ -22,6 +23,7 @@ public class Task6 {
         for (int j = 2; j < i / 2 + 1; j++) {
             if (i % j == 0) {
                 isEven = false;
+                break;
             }
         }
         return isEven;
