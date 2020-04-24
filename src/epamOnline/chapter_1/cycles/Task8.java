@@ -3,7 +3,6 @@ package epamOnline.chapter_1.cycles;
 //Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
 
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
