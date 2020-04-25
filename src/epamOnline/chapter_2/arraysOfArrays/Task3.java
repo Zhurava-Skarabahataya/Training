@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-        int[][] matrix = {{9, 3, 5, 7, 9}, {1, 2, 3, 3, 5}, {4, 6, 3, 2, 1}, {1, 1, 1, 1, 1}, {4, 5, 6, 7, 8}};
+        int[][] matrix = Morpheus.getMixedIntMatrix();
         Scanner sc = new Scanner(System.in);
         Morpheus.printMatrix(matrix);
         int k = sc.nextInt()-1;
@@ -15,8 +15,8 @@ public class Task3 {
             System.out.print(matrix[k][i]+" ");
         }
         System.out.println();
-        for (int i = 0; i < matrix.length; i++) {
-            System.out.println(matrix[i][p]);
+        for (int[] ints : matrix) {
+            System.out.println(ints[p]);
         }
     }
 }

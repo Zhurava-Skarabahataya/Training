@@ -4,7 +4,7 @@ package epamOnline.chapter_2.arraysOfArrays;
 
 public class Task1 {
     public static void main(String[] args) {
-        int[][] matrix = {{9, 3, 5, 7, 9}, {1, 2, 3, 3, 5}, {4, 6, 3, 2, 1}, {1, 1, 1, 1, 1}, {4, 5, 6, 7, 8}};
+        int[][] matrix = Morpheus.getMixedIntMatrix();
         Morpheus.printMatrix(matrix);
         System.out.println();
         for (int[] ints : matrix) {

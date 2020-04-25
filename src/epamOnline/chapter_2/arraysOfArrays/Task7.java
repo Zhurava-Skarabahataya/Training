@@ -10,7 +10,7 @@ public class Task7 {
         int positive = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                matrix[i][j] = Math.sin((i*i - j*j)/n);
+                matrix[i][j] = Math.sin((Math.sqrt(i) - Math.sqrt(j))/n);
                 if (matrix[i][j] > 0){
                     positive++;
                 }
