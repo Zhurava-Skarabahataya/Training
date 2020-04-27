@@ -12,8 +12,8 @@ public class Task9 {
         Morpheus.printMatrix(matrix);
         for (int j = 0; j < matrix[0].length; j++) {
             int sum = 0;
-            for (int i = 0; i < matrix.length; i++) {
-                sum += matrix[i][j];
+            for (int[] ints : matrix) {
+                sum += ints[j];
             }
             if (sum > maxSum){
                 maxSum = sum;

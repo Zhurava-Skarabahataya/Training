@@ -18,7 +18,7 @@ public class Task6 {
         } else if ((-4 <= x && x <= 4) && (y >= -3 && y <= 0)) {
             isPresent = true;
         }
-        System.out.printf(String.valueOf(isPresent));
+        System.out.print(isPresent);
     }
 
 }

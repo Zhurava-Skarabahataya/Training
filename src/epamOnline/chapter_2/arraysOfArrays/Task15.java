@@ -24,10 +24,10 @@ public class Task15 {
 
     private static int findMax(int[][] matrix) {
         int max = matrix[0][0];
-        for (int i = 0; i < matrix.length; i++) {
+        for (int[] ints : matrix) {
             for (int j = 0; j < matrix[0].length; j++) {
-                if (matrix[i][j] > max){
-                    max = matrix[i][j];
+                if (ints[j] > max) {
+                    max = ints[j];
                 }
             }
         }

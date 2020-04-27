@@ -20,6 +20,7 @@ public class Morpheus {
         }
     }
 
+    @SuppressWarnings("SameParameterValue")
     static int generateNumber(int from, int to){
         return (int)(Math.random()*(to-from+1) + from);
     }
