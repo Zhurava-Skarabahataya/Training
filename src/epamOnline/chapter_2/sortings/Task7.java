@@ -8,8 +8,6 @@ package epamOnline.chapter_2.sortings;
 // чтобы новая последовательность оставалась возрастающей.
 //
 
-import java.util.Arrays;
-
 public class Task7 {
     public static void main(String[] args) {
         int[] arrayA = {2, 5, 6, 8, 10, 12};
@@ -17,25 +15,24 @@ public class Task7 {
         mergingArrays(arrayA, arrayB);
     }
 
-    static void mergingArrays ( int[] firstArray, int [] secondArray){
-        int [] result = new int[firstArray.length + secondArray.length];
+    static void mergingArrays(int[] firstArray, int[] secondArray) {
+        int newLength = firstArray.length + secondArray.length;
         int firstArrIndex = 0;
         int secondArrIndex = 0;
-        for (int i = 0; i < result.length; i++) {
-            if (firstArrIndex >= firstArray.length && secondArrIndex < secondArray.length){
-                result[i] = secondArray[secondArrIndex++];
-                System.out.print(firstArrIndex+ " ");
+        for (int i = 0; i < newLength; i++) {
+            if (firstArrIndex >= firstArray.length && secondArrIndex < secondArray.length) {
+                secondArrIndex++;
+                System.out.print(firstArrIndex + " ");
                 continue;
             }
-            if (secondArrIndex >= secondArray.length && firstArrIndex < firstArray.length){
-                result[i] = firstArray[firstArrIndex++];
+            if (secondArrIndex >= secondArray.length && firstArrIndex < firstArray.length) {
+                firstArrIndex++;
                 continue;
             }
-            if (firstArray[firstArrIndex] <= secondArray[secondArrIndex]){
-                result[i] = firstArray[firstArrIndex++];
-            }
-            else {
-                result[i] = secondArray[secondArrIndex++];
+            if (firstArray[firstArrIndex] <= secondArray[secondArrIndex]) {
+                firstArrIndex++;
+            } else {
+                secondArrIndex++;
                 System.out.print(firstArrIndex + " ");
             }
         }
