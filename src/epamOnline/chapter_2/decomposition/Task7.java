@@ -4,13 +4,13 @@ package epamOnline.chapter_2.decomposition;
 
 public class Task7 {
     public static void main(String[] args) {
-        int factSum = findSumOfFact(1, 9);
+        int factSum = findSumOfFact();
         System.out.println(factSum);
     }
 
-    private static int findSumOfFact(int i, int j) {
+    private static int findSumOfFact() {
         int result = 0;
-        for (int k = i; k <= j; k++) {
+        for (int k = 1; k <= 9; k++) {
             if (k%2 == 1){
                 result += findFactorial(k);
             }

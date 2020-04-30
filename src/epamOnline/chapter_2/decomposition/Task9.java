@@ -18,8 +18,7 @@ public class Task9 {
         double square1 = 0.5 * x * y;
         double p = (hipotenusa + z + t)/2;
         double square2 = Math.sqrt(p * (p-hipotenusa) * (p- z) * (p-t));
-        double squareAll = square1 + square2;
-        return squareAll;
+        return square1 + square2;
     }
 
 }
