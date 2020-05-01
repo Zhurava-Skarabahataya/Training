@@ -7,6 +7,9 @@ package epamOnline.chapter_2.decomposition;
 
 public class Task13 {
     public static void main(String[] args) {
-
+        int n = 20;
+        for (int i = n; i <= 2*n - 2; i++) {
+            System.out.println(i + " " + (i+2));
+        }
     }
 }
