@@ -16,12 +16,7 @@ public class Task14 {
     }
 
     private static boolean checkNumber (int n){
-        if ( findSumOfDigits(n) == n){
-            return true;
-        }
-        else {
-            return false;
-        }
+        return findSumOfDigits(n) == n;
     }
 
     private static int findHowManyDigits (int n){
