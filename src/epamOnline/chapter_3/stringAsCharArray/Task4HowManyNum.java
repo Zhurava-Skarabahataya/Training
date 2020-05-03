@@ -1,18 +1,17 @@
 package epamOnline.chapter_3.stringAsCharArray;
 
-//3. В строке найти количество цифр
+//4. В строке найти количество чисел.
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Task3HowManyNumbers {
+public class Task4HowManyNum {
     public static void main(String[] args) {
-        String myString = "London is the cap1ta1 0f Great Br1ta1n";
-        Pattern p = Pattern.compile("[0-9]");
+        String myString = "I have a 23 chikens and 20 cows and 1 big fat pig.";
+        Pattern p = Pattern.compile("[0-9]+");
         Matcher m = p.matcher(myString);
         int numberCount = 0;
         while (m.find()){
-            m.group();
             numberCount++;
         }
         System.out.println(numberCount);
