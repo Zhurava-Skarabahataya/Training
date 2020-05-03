@@ -6,6 +6,10 @@ package epamOnline.chapter_3.stringAsCharArray;
 public class Task5KillSpaces {
     public static void main(String[] args) {
         String myString = "   London   is the      capital  of Great Britain.         ";
+        killSpaces(myString);
+    }
+
+    private static void killSpaces(String myString) {
         String regex = "( )+";
         myString = myString.replaceAll(regex, " ").trim();
         System.out.println(myString);
